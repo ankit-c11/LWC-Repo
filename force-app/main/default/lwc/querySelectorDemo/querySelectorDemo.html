@@ -1,0 +1,14 @@
+<template>
+    <lightning-card class="slds-var-p-around_medium">
+        <h1>Hey I am an H1 tag</h1>
+        <template for:each={users} for:item="user">
+            <div class="name slds-var-p-around_small" key={user}>
+                {user}
+            </div>
+
+        </template>
+        <button onclick = {fetchDetailHandler}>Click</button>    
+
+    </lightning-card>
+        
+</template>

@@ -1,0 +1,17 @@
+<template>
+    
+    <lightning-card title="Two way data binding">
+        <lightning-input class='slds-var-m-around_x-small' type="text" label="Enter some text" onkeyup={inputChangeHandler}></lightning-input>
+        <div class='slds-var-m-around_x-small'>{fullname} is a {title}</div>
+    </lightning-card>
+    
+    <lightning-card title="@track">
+        <lightning-input class='slds-var-m-around_x-small' type="text" label="Enter city name" onkeyup={cityInputChangeHandler}></lightning-input>
+        <div class='slds-var-m-around_x-small'>Ankit lives in {address.city} with pincode {address.postcode}</div>
+    </lightning-card>
+    <lightning-card title="getters">
+        <lightning-input class='slds-var-m-around_x-small' type="text" label="Enter roll number" onkeyup={rollInputChangeHandler}></lightning-input>
+        <div class='slds-var-m-around_x-small'>{studentName}</div>
+    </lightning-card>
+
+</template>

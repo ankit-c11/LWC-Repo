@@ -1,0 +1,14 @@
+div{
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+h1{
+    color:red!important;/* should not syle the h1 on child*/
+}
+/* c-css-child-demo{
+    display: block;
+    margin-top: 15px;
+    height: 40px;
+    background-color: azure;
+} */

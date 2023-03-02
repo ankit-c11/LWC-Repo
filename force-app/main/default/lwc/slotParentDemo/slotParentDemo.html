@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Passing markup thorugh <slot>">
+        <div class="slds-var-m-around_medium">
+            <c-slot-child-demo>
+                <p slot="name">
+                    My name is Ankit Choudhary.
+                </p>
+                <p slot="age">
+                    I am  23 years old.
+                </p>
+                <p slot="footer">Copyrights: None</p>
+            </c-slot-child-demo>
+            <div class="slds-var-m-bottom_medium"></div>
+            <c-slot-child-demo>
+                <p slot="name">
+                    My name is Ankit Choudhary.
+                </p>
+                <p slot="age">
+                    I am  23 years old.
+                </p>
+            </c-slot-child-demo>
+        </div>
+    </lightning-card>    
+</template>

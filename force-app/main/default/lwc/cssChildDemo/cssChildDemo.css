@@ -1,0 +1,12 @@
+:host{
+    display: block;
+    margin-top: 15px;
+    height: 40px;
+    background-color: antiquewhite;
+}
+:host(.azure){
+    display: block;
+    margin-top: 15px;
+    height: 40px;
+    background-color: azure;
+}

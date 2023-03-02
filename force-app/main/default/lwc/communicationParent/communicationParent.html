@@ -1,0 +1,24 @@
+<template>
+    <c-communication-child message = 'Message from the parent' card-heading="Parent to child communication"></c-communication-child>
+    <div class="slds-var-m-bottom_small "></div>
+
+
+    <c-child-carousel-communication carousel-details={carouselDetails}></c-child-carousel-communication>
+    <div class="slds-var-m-bottom_small "></div>
+
+    <lightning-card title="Passing data to child on action">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" onkeyup={changeHandler} value={percentage} label="Enter percentage"></lightning-input>
+            <div class="slds-var-m-bottom_small "></div>
+            <c-pass-data-on-action-at-parent progress-value={percentage}></c-pass-data-on-action-at-parent>
+        </div>
+    </lightning-card>
+    <div class="slds-var-m-bottom_small "></div>
+
+    <lightning-button variant="brand" label="Reset Slider" title="Reset slider" onclick={handleClick}></lightning-button>
+
+    <c-child-action-call-by-parent></c-child-action-call-by-parent>
+
+
+
+</template>

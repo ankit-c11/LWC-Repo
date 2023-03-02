@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="'parent component">
+    <div> I  am from the parent</div>
+    <template if:true={isVisible}>
+        <button class="slds-button slds-button_brand" onclick={handleClick} name='Remove Child'>Remove Child</button>     
+    </template>
+    <template if:false={isVisible}>
+        <button class="slds-button slds-button_brand" onclick={handleClick} name="Show Child">Show Child</button>
+    </template>
+
+    <template if:true={isVisible}>
+        <c-child-l-w-c></c-child-l-w-c>
+    </template>
+    
+    </lightning-card>
+    
+</template>

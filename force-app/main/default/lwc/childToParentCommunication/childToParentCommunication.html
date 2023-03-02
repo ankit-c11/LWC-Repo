@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="C2P communication">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label='Show Modal' onclick={clickHandler}></lightning-button>
+            <template if:true={showModal}>
+                <c-child-to-parent-modal onclose={closeHandler}></c-child-to-parent-modal>
+            </template>
+            <p>{message}</p>
+        </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,19 @@
+<template>
+    
+    <lightning-card title="Conditional rendering">
+        <lightning-input class='slds-var-m-around_x-small' type="text" label="Enter your income" onkeyup={inputChangeHandler}></lightning-input>
+        <div class='slds-var-m-around_x-small'>{incomeString}</div>
+        <div class='slds-var-m-around_x-small' if:true={aboveThreshold}>{message}</div>
+
+    </lightning-card>
+    <lightning-card title="Render if button clicked">
+        <div class='slds-var-m-around_medium'>
+            <lightning-button variant="brand" label={buttonText} 
+            title="Primary action" onclick={handleClick} 
+            class="slds-var-m-around_x-small"></lightning-button>
+            <div if:true={isClicked}>Welcome to my LWC</div>
+            <div if:false={isClicked}>you cant see the data</div>
+
+        </div>
+    </lightning-card>
+</template>

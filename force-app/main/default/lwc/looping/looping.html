@@ -1,0 +1,26 @@
+<template>
+    <!-- <c-hello-world></c-hello-world> -->
+    <lightning-card title="for:each loop">
+        <div class="slds-var-p-around_medium slds-var-m-around_small">
+            <ul class="slds-has-dividers_around-space">
+            <template for:each={footballClubs} for:item="club">
+                <li class="slds-item" key={club}>{club}</li>                  
+            </template>
+            </ul>
+        </div>
+    </lightning-card>
+    <lightning-card title="iterator loop">
+        <div class="slds-var-p-around_medium slds-var-m-around_small">
+            <ul class="slds-has-dividers_around-space">
+            <template iterator:club={teams}>
+                <div class="slds-item" key={club.value.name}>
+                <div if:true={club.first}>List of football clubs and their captain</div>
+                <li class="slds-item"><strong>{club.value.name} </strong> <span>{club.value.captain}</span></li> 
+                <div if:true={club.last}>List ends</div>
+
+                </div>
+            </template>
+            </ul>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+@import 'c/sharedStyleForOneAndTwo';
+
+.html{
+    text-align: right;
+    width:80%;
+    height: 100%;
+    background-color: aquamarine;
+}

@@ -1,0 +1,9 @@
+.wrapper{
+    text-align: center;
+}
+.bar{
+    width: 90%;
+    height: 35px;
+    margin: auto;
+    background-color: rgb(233, 244, 253);
+}
