@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="user Permission">
+        <div class="slds-var-m-around_medium">
+            <template if:true={hasViewAllDataAvailable}>
+                <p>Hurray I have the user permission</p>
+            </template>
+            <template if:false={hasViewAllDataAvailable}>
+                <p>Oops I don't have the user permission</p>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="Custom Permission">
+        <div class="slds-var-m-around_medium">
+            <template if:true={hasCustomPermissionAvailable}>
+                <p>Hurray I have the custom permission</p>
+            </template>
+            <template if:false={hasCustomPermissionAvailable}>
+                <p>Oops I don't have the custom permission</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
