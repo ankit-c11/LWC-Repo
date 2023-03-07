@@ -11,6 +11,7 @@ export default class Notification extends LightningElement {
         this.dispatchEvent(evt);
 
     }
+    
     toastHandlerErr(){
         const evt = new ShowToastEvent({
             title:'Error',
