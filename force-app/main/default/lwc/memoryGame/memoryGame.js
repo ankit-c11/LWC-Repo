@@ -30,7 +30,27 @@ export default class MemoryGame extends LightningElement {
     openedCards = [];
     matchedCards = [];
     moves = 0;
+
+    restart(){
+        if(this.gameStart){
+            clearInterval(this.intervalId);
+        }
+        this.gameStart = false;
+        this.timer = '00:00';
+        this.openedCards = [];
+        this.matchedCards = [];
+        this.moves = 0;
+        Array.from(this.template.querySelectorAll('.card')).forEach(card => {
+            card.className = 'card'
+        })
+        this.shuffle();
+    }
+
     connectedCallback(){
+        this.shuffle();
+    }
+
+   shuffle(){
         let cards = [...this.cards]
 
         for(let j = 0; j < 50; j++){
