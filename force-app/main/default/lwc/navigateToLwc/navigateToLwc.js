@@ -4,7 +4,10 @@ export default class NavigateToLwc extends NavigationMixin(LightningElement) {
 
     navToLwc(){
         var definition={
-            componentDef:'c:quizApp'
+            componentDef:'c:quizApp',
+            attributes:{
+                recordId:'sjfdklhfjkshjklfhaslf'
+            }
         }
         this[NavigationMixin.Navigate]({
             type:'standard__webPage',

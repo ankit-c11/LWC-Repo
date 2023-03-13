@@ -1,6 +1,7 @@
-import { LightningElement } from 'lwc';
+import { LightningElement,api } from 'lwc';
 
 export default class QuizApp extends LightningElement {
+    @api recordId
     questions = [{
         id:'question1',
         question:"Which of the follow has not won Champions League?",
