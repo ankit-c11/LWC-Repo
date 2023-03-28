@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="getListInfoByName Adapter Demo">
+        <div class="slds-var-m-around_small">
+            <template lwc:if={displayColumns}>
+                <div class="slds-m-around_medium">
+                    <template for:each={displayColumns} for:item="col">
+                        <p key={col.fieldApiName}>
+                            {col.fieldApiName} : {col.label}
+                        </p>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

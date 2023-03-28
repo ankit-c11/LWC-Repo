@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="User detail through wire">
+        <div class="slds-var-m-around_medium">
+            User Id: {userId}
+            <template if:true={userDetails}>
+                <div>Name: {userDetails.Name.value}</div>
+                <div>Email: {userDetails.Email.value}</div>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Apex in LWC">
+        <div class="slds-var-m-around_medium">
+            <template lwc:if={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div key={account.Id}>{account.Name}</div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="Apex with params in LWC">
+        
+        <div class="slds-var-m-around_medium">
+            <div class="slds-var-m-bottom_medium">
+                <lightning-combobox
+                 name='Industry'
+                 label='Industry'
+                 value={industryValue}
+                 placeholder="Select Type"
+                 options={industryOptions}
+                 onchange={handleIndustryChange} >
+                </lightning-combobox>
+            </div>
+            <template lwc:if={accountsFiltered}>
+                <template for:each={accountsFiltered} for:item="account">
+                    <div class="slds-box" key={account.Id}>{account.Name}</div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
